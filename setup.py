@@ -28,7 +28,7 @@ INSTALL_REQUIREMENTS = ['requests']
 setup(
     name='bitcointrade',
     description='A Python wrapper for BitcoinTrade API',
-    version='0.1.0',
+    version='0.2.0',
     packages=['bitcointrade'],
     author='Leonardo Monteiro',
     author_email='decastromonteiro@gmail.com',

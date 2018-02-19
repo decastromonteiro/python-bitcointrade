@@ -204,3 +204,18 @@ class BitcoinTradeMarket:
                                    data=data_dict)
 
         return response.json()
+
+
+class BitcoinTradeWallets:
+    def __init__(self, api_token, version='v1'):
+        self.url = "https://api.bitcointrade.com.br/{version}/wallets/{method}"
+        self.api_token = api_token
+        self.version = version
+
+    def get_balance(self, method='balance'):
+        auth_header = {'Authorization': 'ApiToken {api_token}'.format(api_token=self.api_token)}
+
+        response = requests.get(
+            self.url.format(version=self.version, method=method), headers=auth_header)
+
+        return response.json()
